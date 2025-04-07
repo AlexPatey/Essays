@@ -1,0 +1,7 @@
+<ngt-mesh #mesh (pointerover)="hovered.set(true)" (pointerleave)="hovered.set(false)" (click)="navigateToGenesis()">
+  <ngt-ambient-light [intensity]="0.5" />
+  <ngt-spot-light [position]="10" [intensity]="2 * Math.PI" [angle]="0.5" [penumbra]="1" [decay]="0" />
+  <ngt-point-light [position]="-10" [intensity]="2 * Math.PI" [decay]="0" />
+  <ngt-box-geometry />
+  <ngt-mesh-standard-material [color]="hovered() ? 'darkgrey' : 'black'" />
+</ngt-mesh>
