@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NgtCanvas, extend } from 'angular-three';
 import { SceneGraph } from '../scenegraph/scenegraph.component';
-import * as THREE from 'three';
+import { Mesh, BoxGeometry } from 'three';
 
-extend(THREE);
+extend({Mesh, BoxGeometry, MyMesh: Mesh});
 
 @Component({
   selector: 'app-home',
